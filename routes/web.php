@@ -77,5 +77,9 @@ Route::group(['middleware' => 'auth' , 'prefix' => 'admin'] , function() {
 		Route::resource('/admin_department','Admin\AdminDepartmentController');
 		Route::resource('/admin_hall','Admin\AdminHallController');
 		Route::resource('/admin_quiz_topic','Admin\AdminQuizTopicController');
+		Route::resource('/admin_section','Admin\AdminSectionController');
+		Route::resource('/admin_registers','Admin\AdminRegisterController');
+		Route::resource('/admin_librarians','Admin\AdminLibrarianController');
 
 	});
+

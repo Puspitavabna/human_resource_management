@@ -12,4 +12,12 @@ class Designation extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public function registers()
+    {
+        return $this->hasMany('App\Models\Register');
+    }
+    public function librarians()
+    {
+        return $this->hasMany('App\Models\Librarian');
+    }
 }
