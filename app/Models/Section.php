@@ -19,6 +19,10 @@ class Section extends Model
     public function uploads(){
         return $this->hasMany('App\Models\Upload');
     }
+    public function planning_development_officers()
+    {
+        return $this->hasMany('App\Models\PlanningDevelopmentOfficer');
+    }
 
     public function getTutorialUrlAttribute(){
         $tutorial_url = route('designation.show', [$this->category->category_slug, $this->slug]);

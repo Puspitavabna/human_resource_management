@@ -20,4 +20,24 @@ class Designation extends Model
     {
         return $this->hasMany('App\Models\Librarian');
     }
+    public function audits()
+    {
+        return $this->hasMany('App\Models\Librarian');
+    }
+    public function medical_officers()
+    {
+        return $this->hasMany('App\Models\MedicalOfficer');
+    }
+    public function exam_controllers()
+    {
+        return $this->hasMany('App\Models\ExamController');
+    }
+    public function student_instructors()
+    {
+        return $this->hasMany('App\Models\StudentInstructor');
+    }
+    public function planning_development_officers()
+    {
+        return $this->hasMany('App\Models\PlanningDevelopmentOfficer');
+    }
 }

@@ -80,6 +80,11 @@ Route::group(['middleware' => 'auth' , 'prefix' => 'admin'] , function() {
 		Route::resource('/admin_section','Admin\AdminSectionController');
 		Route::resource('/admin_registers','Admin\AdminRegisterController');
 		Route::resource('/admin_librarians','Admin\AdminLibrarianController');
+		Route::resource('/admin_audits','Admin\AdminAuditController');
+		Route::resource('/admin_medical_officers','Admin\AdminMedicalOfficerController');
+		Route::resource('/admin_exam_controllers','Admin\AdminExamControllerController');
+		Route::resource('/admin_student_instructors','Admin\AdminStudentInstructorController');
+		Route::resource('/admin_planning_development','Admin\AdminPlanningDevelopmentOfficerController');
 
 	});
 
