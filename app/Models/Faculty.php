@@ -10,4 +10,9 @@ class Faculty extends Model
     {
         return $this->hasMany('App\Models\Department');
     }
+    public function facultyMembers()
+    {
+        return $this->hasMany('App\Models\FacultyMember');
+    }
+
 }

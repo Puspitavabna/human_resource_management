@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    Here you will get tutorial. <a href="{{ route('admin_section.create') }}">Create section</a>
+                    Here you will get tutorial. <a href="{{ route('admin_hall_members.create') }}">Create Hall Member</a>
 
                 </div>
                 <div class="alert alert-success">
@@ -23,14 +23,15 @@
                         {{ csrf_field() }}
                         <tr>
                             <td>{{ $hall_member->id }}</td>
-                            <td>{{ $hall_member->name}}</td>
-                            <td>{{ $hall_member->slug}}</td>
+                            <td>{{ $hall_member->designation->name}}</td>
+                            <td>{{ $hall_member->user->name}}</td>
+                            <td>{{ $hall_member->hall->name}}</td>
                             <td width="5%">
-                                <a href="{{ route('admin_section.edit', $section->slug) }}" target="_blank" class="btn-sm btn-warning">Edit</a>
-                              <form method="POST" action="{{ route('admin_section.destroy', $section->slug) }}">
-                                    <input name="_method" type="hidden" value="DELETE">
-                                    <input type="submit" value="Delete" class="btn-sm btn-danger">
-                               </form>
+                                {{--<a href="{{ route('admin_hall_members.edit', $hall_members->slug) }}" target="_blank" class="btn-sm btn-warning">Edit</a>--}}
+                              {{--<form method="POST" action="{{ route('admin_hall_members.destroy', $hall_members->slug) }}">--}}
+                                    {{--<input name="_method" type="hidden" value="DELETE">--}}
+                                    {{--<input type="submit" value="Delete" class="btn-sm btn-danger">--}}
+                               {{--</form>--}}
                             </td>
                         </tr>
                     @endforeach

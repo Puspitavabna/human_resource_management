@@ -40,4 +40,24 @@ class Designation extends Model
     {
         return $this->hasMany('App\Models\PlanningDevelopmentOfficer');
     }
+    public function facultyMembers()
+    {
+        return $this->hasMany('App\Models\FacultyMember');
+    }
+    public function facultyOffice()
+    {
+        return $this->hasMany('App\Models\FacultyOffice');
+    }
+    public function research_cell()
+    {
+        return $this->hasMany('App\Models\ResearchCell');
+    }
+    public function vc_ofice()
+    {
+        return $this->hasMany('App\Models\VcOffice');
+    }
+    public function cyber_center()
+    {
+        return $this->hasMany('App\Models\CyberCenters');
+    }
 }

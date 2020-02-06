@@ -8,6 +8,8 @@ use App\Models\HallMember;
 use App\Models\Hall;
 use App\User;
 use Illuminate\Http\Request;
+
+use Auth;
 use DB;
 use Session;
 
@@ -25,11 +27,11 @@ class AdminHallMemberController extends Controller
     }
     public function store(Request $request){
         $hall_member = new HallMember();
-        $hall_member->user_id = $request->user_id;
+        $hall_member->user_id = Auth::user()->id;
         $hall_member->hall_id = $request->hall_id;
         $hall_member->designation_id = $request->designation_id;
         $hall_member->save();
         Session::flash('success','Hall Members added successfully!!');
-        return redirect()->route('admin.hall_member.index');
+        return redirect()->route('admin_hall_members.index');
     }
 }

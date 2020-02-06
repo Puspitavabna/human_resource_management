@@ -12,4 +12,8 @@ class Department extends Model
     {
         return $this->belongsTo('App\Models\Faculty');
     }
+    public function facultyMembers()
+    {
+        return $this->hasMany('App\Models\FacultyMember');
+    }
 }

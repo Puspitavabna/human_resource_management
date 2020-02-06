@@ -85,6 +85,11 @@ Route::group(['middleware' => 'auth' , 'prefix' => 'admin'] , function() {
 		Route::resource('/admin_exam_controllers','Admin\AdminExamControllerController');
 		Route::resource('/admin_student_instructors','Admin\AdminStudentInstructorController');
 		Route::resource('/admin_planning_development','Admin\AdminPlanningDevelopmentOfficerController');
+		Route::resource('/admin_hall_members','Admin\AdminHallMemberController');
+        Route::resource('users', 'UserController', ['as' => 'admin']);
+        Route::resource('/admin_faculty_members', 'Admin\FacultyMemberController');
+        Route::resource('/admin_faculty_office', 'Admin\FacultyOfficeController');
+        Route::resource('/admin_research_cell', 'Admin\ResearchCellController');
 
 	});
 
