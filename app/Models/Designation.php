@@ -58,6 +58,42 @@ class Designation extends Model
     }
     public function cyber_center()
     {
-        return $this->hasMany('App\Models\CyberCenters');
+        return $this->hasMany('App\Models\CyberCenter');
+    }
+    public function bncc()
+    {
+        return $this->hasMany('App\Models\Bncc');
+    }
+    public function traffic_section()
+    {
+        return $this->hasMany('App\Models\TrafficSection');
+    }
+    public function harassments()
+    {
+        return $this->hasMany('App\Models\Harassment');
+    }
+    public function ict_cell()
+    {
+        return $this->hasMany('App\Models\IctCell');
+    }
+    public function environment_development()
+    {
+        return $this->hasMany('App\Models\EnvironmentDevelopment');
+    }
+    public function officer_association()
+    {
+        return $this->hasMany('App\Models\OfficerAssociation');
+    }
+    public function pro_vc_office()
+    {
+        return $this->hasMany('App\Models\ProVcOffice');
+    }
+    public function regulations()
+    {
+        return $this->hasMany('App\Models\Regulation');
+    }
+    public function publication_office()
+    {
+        return $this->hasMany('App\Models\PublicationOffice');
     }
 }

@@ -17,4 +17,16 @@
   <a href="{!! route('admin_faculty_members.index') !!}"><i class="fa fa-edit"></i><span>Faculty Members</span></a><br>
   <a href="{!! route('admin_faculty_office.index') !!}"><i class="fa fa-edit"></i><span>Faculty Office</span></a><br>
   <a href="{!! route('admin_research_cell.index') !!}"><i class="fa fa-edit"></i><span>Research Cell</span></a><br>
+  <a href="{!! route('admin_cyber_center.index') !!}"><i class="fa fa-edit"></i><span>Cyber Center</span></a><br>
+  <a href="{!! route('admin_bncc.index') !!}"><i class="fa fa-edit"></i><span>BNCC</span></a><br>
+  <a href="{!! route('admin_vc_office.index') !!}"><i class="fa fa-edit"></i><span>Vc Office</span></a><br>
+  <a href="{!! route('admin_traffic_section.index') !!}"><i class="fa fa-edit"></i><span>Traffic Section</span></a><br>
+  <a href="{!! route('admin_physical_excercise.index') !!}"><i class="fa fa-edit"></i><span>Excercise</span></a><br>
+  <a href="{!! route('admin_harassment.index') !!}"><i class="fa fa-edit"></i><span>Harassment</span></a><br>
+  <a href="{!! route('admin_environment_development.index') !!}"><i class="fa fa-edit"></i><span>Environment Development</span></a><br>
+  <a href="{!! route('admin_publication_office.index') !!}"><i class="fa fa-edit"></i><span>Publication Office</span></a><br>
+  <a href="{!! route('admin_regulation.index') !!}"><i class="fa fa-edit"></i><span>Regulation</span></a><br>
+  <a href="{!! route('admin_ict_cell.index') !!}"><i class="fa fa-edit"></i><span>ICT Cell</span></a><br>
+  <a href="{!! route('admin_officer_association.index') !!}"><i class="fa fa-edit"></i><span>Officer Association</span></a><br>
+  <a href="{!! route('admin_pro_vc_office.index') !!}"><i class="fa fa-edit"></i><span>Pro Vc Office</span></a><br>
 </div>

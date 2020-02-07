@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Department;
 use App\Models\Faculty;
+use App\Models\VcOffice;
 use App\Models\Designation;
 use App\Models\FacultyMember;
 use App\Models\Section;
@@ -15,22 +16,22 @@ use Illuminate\Http\Request;
 use DB;
 use Session;
 
-class CyberCenterController extends Controller
+class VcOfficeController extends Controller
 {
     public function index(){
-        $cyber_centers = CyberCenter::all();
-        return view('admin.cyber_center.index', compact('cyber_centers'));
+        $vc_offices = VcOffice::all();
+        return view('admin.vc_office.index', compact('vc_offices'));
     }
     public function create(){
         $designations = Designation::all();
-        return view ('admin.cyber_center.create',compact('designations'));
+        return view ('admin.vc_office.create',compact('designations'));
     }
     public function store(Request $request){
-        $cyber_center = new CyberCenter();
-        $cyber_center->name = $request->name;
-        $cyber_center->designation_id = $request->designation_id;
-        $cyber_center->save();
+        $vc_office = new VcOffice();
+        $vc_office->name = $request->name;
+        $vc_office->designation_id = $request->designation_id;
+        $vc_office->save();
         Session::flash('success','librarian added successfully!!');
-        return redirect()->route('admin_cyber_center.index');
+        return redirect()->route('admin_vc_office.index');
     }
 }

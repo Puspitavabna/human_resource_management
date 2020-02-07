@@ -5,6 +5,7 @@ use App\Models\Department;
 use App\Models\Faculty;
 use App\Models\Designation;
 use App\Models\FacultyMember;
+use App\Models\Bncc;
 use App\Models\Section;
 use App\Models\HallMember;
 use App\Models\librarian;
@@ -15,22 +16,24 @@ use Illuminate\Http\Request;
 use DB;
 use Session;
 
-class CyberCenterController extends Controller
+class BnccController extends Controller
 {
     public function index(){
-        $cyber_centers = CyberCenter::all();
-        return view('admin.cyber_center.index', compact('cyber_centers'));
+        $bnccs = Bncc::all();
+        dd('djhd');
+        return view('admin.bncc.index', compact('bnccs'));
     }
     public function create(){
         $designations = Designation::all();
-        return view ('admin.cyber_center.create',compact('designations'));
+        return view ('admin.bncc.create',compact('designations'));
     }
     public function store(Request $request){
-        $cyber_center = new CyberCenter();
-        $cyber_center->name = $request->name;
-        $cyber_center->designation_id = $request->designation_id;
-        $cyber_center->save();
+        $bncc = new Bncc();
+        $bncc->name = $request->name;
+        $bncc->phone_no = $request->phone_no;
+        $bncc->designation_id = $request->designation_id;
+        $bncc->save();
         Session::flash('success','librarian added successfully!!');
-        return redirect()->route('admin_cyber_center.index');
+        return redirect()->route('admin_bncc.index');
     }
 }
