@@ -6,12 +6,12 @@
             <div class="col-md-12">
                 <div class="alert alert-success">
                     <div class="clearfix"></div>
-                    <form method="post" action="{{ route('admin_designation.update', $tutorial->slug) }}" enctype="multipart/form-data">
+                    <form method="post" action="{{ route('admin_designation.update', $designation->id) }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <input name="_method" type="hidden" value="PUT">
                         <div class="form-group"> <!-- Name field -->
-                            <label class="control-label " for="name">Title</label>
-                            <input class="form-control" name="title" type="text"  value="{{$tutorial->name}}" />
+                            <label class="control-label " for="name">Name</label>
+                            <input class="form-control" name="name" type="text"  value="{{$designation->name}}" />
                         </div>
                         <div class="form-group float-right">
                             <button type="submit" class="btn btn-primary ">Submit</button>

@@ -27,4 +27,26 @@ class AdminDesignationController extends Controller
         Session::flash('success','Question added successfully!!');
         return redirect()->route('admin_designation.index');
     }
+    public function edit($id){
+        $designation = Designation::find($id);
+        return view('admin.designation.edit', compact('designation'));
+    }
+
+    public function update(Request $request, $id){
+
+        $designation = Designation::find($id);
+
+        $slug = strtolower($request['name']);
+        $slug = str_replace(' ', '-', $slug);
+        $designation->name = $request->name;
+        $designation->slug = $slug;
+        $designation->update();
+        return redirect()->route('admin_designation.index');
+    }
+    public function destroy($id){
+        $designation = Designation::find($id);
+        $designation->delete();
+        Session::flash('success','Question delete successfully');
+        return redirect()->route('admin_designation.index');
+    }
 }

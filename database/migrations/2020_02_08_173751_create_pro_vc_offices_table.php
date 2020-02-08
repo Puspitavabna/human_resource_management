@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProVcOfficesTable extends Migration
+class CreateProvcOfficeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,8 @@ class CreateProVcOfficesTable extends Migration
     {
         Schema::create('pro_vc_offices', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('designation_id');
             $table->timestamps();
         });
     }

@@ -13,19 +13,17 @@
                             <tr>
                                 <th>No.</th>
                                 <th>Name </th>
-                                <th>Phone No </th>
                                 <th>Designation</th>
                             </tr>
                         </thead>
                     <tbody>
 
-                    @foreach($pro_vc_offices as $key => $pro_vc_office)
+                    @foreach($provc_offices as $key => $provc_office)
                         {{ csrf_field() }}
                         <tr>
-                            <td>{{ $pro_vc_office->id }}</td>
-                            <td>{{ $pro_vc_office->name}}</td>
-                            <td>{{ $pro_vc_office->phone_no}}</td>
-                            <td>{{ $pro_vc_office->designation->name}}</td>
+                            <td>{{ $provc_office->id }}</td>
+                            <td>{{ $provc_office->name}}</td>
+                            <td>{{ $provc_office->designation->name}}</td>
                             {{--<td width="5%">--}}
                                 {{--<a href="{{ route('admin_department.edit', $department->slug) }}" target="_blank" class="btn-sm btn-warning">Edit</a>--}}
                               {{--<form method="POST" action="{{ route('admin_department.destroy', $department->slug) }}">--}}

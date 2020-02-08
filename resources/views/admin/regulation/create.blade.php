@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="alert alert-success">
-                    <form method="post" action="{{ route('admin_research_cell.store') }}" enctype="multipart/form-data">
+                    <form method="post" action="{{ route('admin_regulation.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
                         <div class="form-group"> <!-- Name field -->

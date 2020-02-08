@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    Here you will get tutorial. <a href="{{ route('admin_environment_development.create') }}">Create faculty office</a>
+                    Here you will get tutorial. <a href="{{ route('admin_environment_development.create') }}">Create Environment Development</a>
 
                 </div>
                 <div class="alert alert-success">

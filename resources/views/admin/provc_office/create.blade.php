@@ -12,10 +12,6 @@
                             <label class="control-label " for="name" >Name</label>
                             <input class="form-control" name="name" type="text" placeholder="name" required />
                         </div>
-                        <div class="form-group"> <!-- Name field -->
-                            <label class="control-label " for="name" >Phone No</label>
-                            <input class="form-control" name="phone_no" type="text" placeholder="phone_no" required />
-                        </div>
                         <div class="form-group category-box">
                             <div>Select Designation here:</div>
                             <select name="designation_id" class="form-control category_select" data-value="1">

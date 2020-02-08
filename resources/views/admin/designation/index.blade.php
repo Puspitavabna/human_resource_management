@@ -24,8 +24,8 @@
                             <td>{{ $designation->id }}</td>
                             <td>{{ $designation->name}}</td>
                             <td width="5%">
-                                <a href="{{ route('admin_designation.edit', $designation->slug) }}" target="_blank" class="btn-sm btn-warning">Edit</a>
-                              <form method="POST" action="{{ route('admin_designation.destroy', $designation->slug) }}">
+                                <a href="{{ route('admin_designation.edit', $designation->id) }}" target="_blank" class="btn-sm btn-warning">Edit</a>
+                              <form method="POST" action="{{ route('admin_designation.destroy', $designation->id) }}">
                                     <input name="_method" type="hidden" value="DELETE">
                                     <input type="submit" value="Delete" class="btn-sm btn-danger">
                                </form>

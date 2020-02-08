@@ -22,11 +22,11 @@ class PublicationOfficeController extends Controller
 {
     public function index(){
         $publication_offices = PublicationOffice::all();
-        return view('admin.publicationOffice.index', compact('$publication_offices'));
+        return view('admin.publication_office.index', compact('publication_offices'));
     }
     public function create(){
         $designations = Designation::all();
-        return view ('admin.publicationOffice.create',compact('designations'));
+        return view ('admin.publication_office.create',compact('designations'));
     }
     public function store(Request $request){
         $publication_office = new PublicationOffice();
@@ -34,6 +34,6 @@ class PublicationOfficeController extends Controller
         $publication_office->designation_id = $request->designation_id;
         $publication_office->save();
         Session::flash('success','librarian added successfully!!');
-        return redirect()->route('admin_publicationOffice.index');
+        return redirect()->route('admin_publication_office.index');
     }
 }

@@ -34,6 +34,6 @@ class ProVcOfficeController extends Controller
         $provc_office->designation_id = $request->designation_id;
         $provc_office->save();
         Session::flash('success','librarian added successfully!!');
-        return redirect()->route('admin_provc_office.index');
+        return redirect()->route('admin_pro_vc_office.index');
     }
 }

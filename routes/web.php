@@ -94,14 +94,14 @@ Route::group(['middleware' => 'auth' , 'prefix' => 'admin'] , function() {
         Route::resource('/admin_bncc', 'Admin\BnccController');
         Route::resource('/admin_vc_office', 'Admin\VcOfficeController');
         Route::resource('/admin_traffic_section', 'Admin\TrafficSectionController');
-        Route::resource('/admin_harassments', 'Admin\HarassmentController');
+        Route::resource('/admin_harassment', 'Admin\HarassmentController');
         Route::resource('/admin_physical_excercise', 'Admin\PhysicalExcerciseController');
         Route::resource('/admin_environment_development', 'Admin\EnvironmentDevelopmentController');
         Route::resource('/admin_officer_association', 'Admin\OfficerAssociationController');
         Route::resource('/admin_regulation', 'Admin\RegulationController');
         Route::resource('/admin_ict_cell', 'Admin\IctCellController');
         Route::resource('/admin_publication_office', 'Admin\PublicationOfficeController');
-        Route::resource('/admin_pro_vc_office', 'Admin\ProVcController');
+        Route::resource('/admin_pro_vc_office', 'Admin\ProVcOfficeController');
 
 	});
 

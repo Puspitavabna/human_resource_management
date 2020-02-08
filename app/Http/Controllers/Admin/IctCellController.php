@@ -23,11 +23,11 @@ class IctCellController extends Controller
 {
     public function index(){
         $ict_cells = IctCell::all();
-        return view('admin.publicationOffice.index', compact('ict_cells'));
+        return view('admin.ict_cell.index', compact('ict_cells'));
     }
     public function create(){
         $designations = Designation::all();
-        return view ('admin.publicationOffice.create',compact('designations'));
+        return view ('admin.ict_cell.create',compact('designations'));
     }
     public function store(Request $request){
         $ict_cell = new IctCell();
@@ -35,6 +35,6 @@ class IctCellController extends Controller
         $ict_cell->designation_id = $request->designation_id;
         $ict_cell->save();
         Session::flash('success','librarian added successfully!!');
-        return redirect()->route('admin_publicationOffice.index');
+        return redirect()->route('admin_ict_cell.index');
     }
 }

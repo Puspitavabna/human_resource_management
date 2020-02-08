@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    Here you will get tutorial. <a href="{{ route('admin_research_cell.create') }}">Create faculty office</a>
+                    Here you will get tutorial. <a href="{{ route('admin_regulation.create') }}">Create Regulation</a>
 
                 </div>
                 <div class="alert alert-success">
@@ -19,13 +19,13 @@
                         </thead>
                     <tbody>
 
-                    @foreach($research_cells as $key => $research_cell)
+                    @foreach($regulations as $key => $regulation)
                         {{ csrf_field() }}
                         <tr>
-                            <td>{{ $research_cell->id }}</td>
-                            <td>{{ $research_cell->name}}</td>
-                            <td>{{ $research_cell->phone_no}}</td>
-                            <td>{{ $research_cell->designation->name}}</td>
+                            <td>{{ $regulation->id }}</td>
+                            <td>{{ $regulation->name}}</td>
+                            <td>{{ $regulation->phone_no}}</td>
+                            <td>{{ $regulation->designation->name}}</td>
                             {{--<td width="5%">--}}
                                 {{--<a href="{{ route('admin_department.edit', $department->slug) }}" target="_blank" class="btn-sm btn-warning">Edit</a>--}}
                               {{--<form method="POST" action="{{ route('admin_department.destroy', $department->slug) }}">--}}
